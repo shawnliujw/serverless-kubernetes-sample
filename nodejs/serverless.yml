@@ -1,0 +1,13 @@
+service: nodejs
+provider:
+  name: kubeless
+  runtime: nodejs6
+  namespace: functions
+
+plugins:
+  - serverless-kubeless
+
+functions:
+  hello-nodejs:
+    handler: handler.capitalize
+    memorySize: 100M
